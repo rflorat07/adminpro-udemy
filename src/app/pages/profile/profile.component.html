@@ -41,7 +41,6 @@
         <img *ngIf="!imagenTemp" [src]="usuario.img | imagen" class="w150">
         <img *ngIf="imagenTemp"  [src]="imagenTemp" class="w150">
 
-        <form class="form">
           <div class="form-group">
             <div class="input-group">
               <input type="file" (change)="seleccionImagen($event.target.files[0])" class="form-control">
@@ -52,12 +51,7 @@
             <i class="fa fa-save"> </i>
             Actualizar Foto
           </button>
-
-        </form>
-
-
-
-
+          
       </div>
     </div>
   </div>
