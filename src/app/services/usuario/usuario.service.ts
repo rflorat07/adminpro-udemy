@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 // Model
@@ -12,14 +13,11 @@ import { map } from 'rxjs/operators';
 
 // SweetAlert
 import swal from 'sweetalert';
-import { Router } from '@angular/router';
 
 // Services
 import { SubirArchivoService } from '../subir-archivo/subir-archivo.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class UsuarioService {
 
   usuario: Usuario;
