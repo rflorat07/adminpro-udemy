@@ -35,12 +35,9 @@ export class ProfileComponent implements OnInit {
       this.usuario.email = usuario.email;
     }
 
-    this._usuarioService.actualizarUsuario(this.usuario).subscribe((resp: any) => {
-      console.log(resp);
-    });
+    this._usuarioService.actualizarUsuario(this.usuario).subscribe();
 
   }
-
 
   seleccionImagen(archivo: File) {
 
@@ -58,7 +55,7 @@ export class ProfileComponent implements OnInit {
     this.imagenSubir = archivo;
 
     let reader = new FileReader();
-    let urlImagenTemp = reader.readAsDataURL( archivo );
+    let urlImagenTemp = reader.readAsDataURL(archivo);
 
     reader.onloadend = () => this.imagenTemp = reader.result.toString();
 

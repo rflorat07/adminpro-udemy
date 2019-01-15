@@ -1,8 +1,11 @@
 
+// Guards
+
+export { AdminGuard } from './guards/admin.guard';
+export { LoginGuard } from './guards/login-guard.guard';
 
 // Services
 
-export { LoginGuard } from './guards/login-guard.guard';
 export { SharedService } from './shared/shared.service';
 export { SidebarService } from './shared/sidebar.service';
 export { UsuarioService } from './usuario/usuario.service';
